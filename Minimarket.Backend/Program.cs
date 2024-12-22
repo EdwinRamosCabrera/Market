@@ -1,4 +1,6 @@
 
+using Microsoft.EntityFrameworkCore;
+
 namespace Minimarket.Backend
 {
 	public class Program
@@ -10,6 +12,9 @@ namespace Minimarket.Backend
 			// Add services to the container.
 
 			builder.Services.AddControllers();
+			var connectionString = builder.Configuration.GetConnectionString("MySQLConnection");
+			builder.Services.AddDbContext<Minimarket.Backend.Data.DataContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
