@@ -15,7 +15,6 @@ namespace Minimarket.Backend.Data
 		public DbSet<Pedido> Pedidos { get; set; }
 		public DbSet<DetalleVenta> DetalleVentas { get; set; }
 
-
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
