@@ -17,7 +17,7 @@ namespace Minimarket.Shared.Entities
 		[DisplayName("Código")]
 		[MaxLength(100, ErrorMessage = "El campo {0} debe tener maximo {1} carácteres.")]
 		[Required(ErrorMessage = "El campo {0} es obligatorio.")]
-		public string codigo { get; set; } = null!;
+		public string Codigo { get; set; } = null!;
 
 		[MaxLength(100, ErrorMessage = "El campo {0} debe tener maximo {1} carácteres.")]
 		[Required(ErrorMessage = "El campo {0} es obligatorio.")]
